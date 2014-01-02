@@ -1,0 +1,47 @@
+<idea-plugin version="2">
+  <id>inc.sh.simple.androidstudio.ideaplugin</id>
+  <name>Simple Plugin for AndroidStudio</name>
+  <version>1.0</version>
+  <vendor email="monchenko.i.d@gmail.com" url="http://www.yourcompany.com">Simple Plugin</vendor>
+
+  <description><![CDATA[
+      Simple IntellJ IDEA plugin for Android Studio.<br>
+      <small>Sh.inc</small>
+      ]]></description>
+
+  <change-notes><![CDATA[
+      first version
+      ]]>
+  </change-notes>
+
+  <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Build+Number+Ranges for description -->
+  <idea-version since-build="107.105"/>
+
+  <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+    <depends>com.intellij.modules.java</depends>
+
+    <application-components>
+    <!-- Add your application components here -->
+  </application-components>
+
+  <project-components>
+    <!-- Add your project components here -->
+  </project-components>
+
+    <actions>
+        <action id="AndroidHoloColors.generator" class="inc.sh.simple.androidstudio.ideaplugin.SimplePluginGenerator" text="Simple Plugin"
+                description="Generate android holo widgets with custom colors" icon="/icons/SH.png">
+            <add-to-group group-id="MainToolBar" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="shift meta SH"/>
+        </action>
+    </actions>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+</idea-plugin>
